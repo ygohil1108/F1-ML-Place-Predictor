@@ -10,7 +10,7 @@ from pymongo import MongoClient
 app = Flask(__name__)
 
 # Connect to MongoDB
-client = MongoClient("mongodb://localhost:27017/")
+client = MongoClient("{Your-LocalHost-Server}")
 db = client["F1_ML_Data"]
 collection_cat = db["Current_Season_Categorical"]
 collection_num = db['Current_Season']
