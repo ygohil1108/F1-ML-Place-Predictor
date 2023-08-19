@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/results_style.css') }}">
+</head>
+<body>
+    <div class="results-container">
+        <h1 class="results-header">Results</h1>
+        <h2 class="results_race_year">Monaco Grand Prix</h2>
+        <div class="content-container">
+            <div class="driver-info">
+                <div class="driver-image"></div>
+                <p class="driver-name">Driver Name</p>
+            </div>
+            <div class="output-status">
+                <h2 class="status-text">Podium Finish</h2>
+            </div>
+        </div>
+    </div>
+    <div class="button-container">
+        <div class="home-button">Predict New Result</div>
+    </div>
+    <script src="{{ url_for('static', filename='js/results.js') }}"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Finish Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!--Block for Webpage Heading-->
+    <div id="header_box">
+        <h1 id="web_header">Welcome to 2022 F1 Finish Predictor</h1>
+    </div>
+
+    <!--Flexbox for Racing Images-->
+    <div class="flexbox-container">
+        <div class = "flexbox-item flexbox-item-left-flag">
+            <img src="../static/images/checkered-flag-1.png">
+        </div>
+        <div class = "flexbox-item flexbox-item-racecar">
+            <img src="../static/images/f1-car.png">
+        </div>
+        <div class = "flexbox-item flexbox-item-right-flag">
+            <img src="../static/images/checkered-flag-1.png">
+        </div>
+    </div>
+
+    <!-- Traffic Light -->
+    <div class="traffic-light">
+        <div class="red-circle"></div>
+        <div class="gold-circle"></div>
+        <div class="green-circle"></div>
+    </div>
+
+    <!-- Dropdowns -->
+    <div class="dropdown-container">
+        <div class="dropdown">
+            <h3 class="dropdown-header">Grand Prix</h3>
+            <select id="grand-prix-dropdown">
+                <!-- Options for Grand Prix -->
+            </select>
+        </div>
+        <div class="dropdown">
+            <h3 class="dropdown-header">Driver</h3>
+            <select id="driver-dropdown">
+                <!-- Options for Drivers -->
+            </select>
+        </div>
+    </div>
+
+    <!-- Submit Button and Pirelli Tire Loading -->
+    <div class="button-container">
+        <a href="#" class="image-button">
+            <img src="../static/images/pirelli-tire.png" alt="Button Image">
+        </a>
+    </div>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

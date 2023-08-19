@@ -1,0 +1,94 @@
+body {
+    background-image: url(../images/background_circuit.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.results-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid goldenrod;
+    border-radius: 20px;
+    padding: 20px;
+    width: 60%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.results-header, .results_race_year {
+    color: goldenrod;
+    font-family: 'Your Font Here', sans-serif;
+    margin-top: 0;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.driver-info, .output-status {
+    padding: 20px;
+    flex-grow: 1;
+    border: 2px solid goldenrod;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.driver-image {
+    width: 150px;
+    height: 150px;
+    border: 3px solid goldenrod;
+    border-radius: 10px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.driver-image img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.driver-name, .status-text {
+    color: goldenrod;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+    top: 50px;
+}
+
+.home-button {
+    background-color: black;
+    color: goldenrod;
+    border: 2px solid goldenrod;
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.home-button:hover {
+    transform: scale(1.1);
+}
