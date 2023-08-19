@@ -12,75 +12,105 @@
 Kaggle Dataset: https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020
 
 # Skills Demonstrated
-The skills I learned through this project include advanced knowledge of Python libraries used for Data Science, Machine Learning, Data Storage, and Databases. I also learned Amazon Web Services like s3, Sagemaker, EC2, and many more AWS services in order to train the model on large amounts of data. To create the F1 ML Web App, I had to learn HTML, CSS, Javascript, and Python backend programming using Flask. 
+- Advanced knowledge of Python libraries used for Data Science, Machine Learning, Data Storage, and Databases.
+- Proficiency in Amazon Web Services (AWS) tools like s3, Sagemaker, EC2, and various other AWS services for efficient large-scale model training.
+- Mastery of HTML, CSS, JavaScript, and Python backend programming with Flask to create the F1 ML Web App.
 
 # Before vs. After
-Keep in mind, I had no practical Machine Learning knowledge before this project. 
+- Keep in mind, I had no practical Machine Learning knowledge before this project.
 
-Through the struggles of this project I have become very comfortable with Machine Learning practices like data preprocessing, One-Hot-Encoding, Imputing Missing Values, Training and Testing splits, preventing Data Leakage, Machine Learning Algorithms, SMOTE, Hyperparameter Tuning, Class Imbalance, and scoring metrics to understand how well a machine learning model will perform. 
+- Through the struggles of this project, I have gained proficiency in various Machine Learning practices including:
+
+   - Data preprocessing techniques
+   - One-Hot-Encoding for categorical data
+   - Imputing missing values in datasets
+   - Conducting Training and Testing splits for model evaluation
+   - Creating Machine Learning Pipelines using Scaling and Estimators
+   - Preventing Data Leakage in machine learning pipelines
+   - Familiarity with a variety of Machine Learning Algorithms
+   - Application of SMOTE (Synthetic Minority Over-sampling Technique)
+   - Hyperparameter Tuning for optimizing model performance
+   - Managing Class Imbalance in classification tasks
+   - Understanding and utilizing scoring metrics to assess machine learning model performance
 
 # How It Works
-   +-------------------+
-   |    Frontend       |
-   | (HTML/CSS/JS)     |
-   +-------------------+
-          |
-
-          
-   +-------------------+
-   | Flask Backend     |
-   +-------------------+
-          |
-
-
-          
-   +-------------------+
-   |   MongoDB         |
-   +-------------------
-          
-         AWS
-          |
-   +-------------------+
-   |   AWS Machine     |
-   |   Learning        |
-   +-------------------+
-          |
-   +-------------------+
-   |   MongoDB         |
-   |   (Models)        |
-   +-------------------+
-          |
-   +-------------------+
-   |   DataHandler     |
-   |    MongoDB        |
-   +-------------------+
-          |
-   +-------------------+
-   | Kaggle Dataset    |
-   +-------------------+
+- Please reference schematic.
 
 # Website Preview
 Website Link: Almost Done
 
-Once you get on the website, navigate to the grand prix dropdown. Select a grand prix, then navigate to the driver dropdown and select a driver.
-Once you have chosen both a grand prix and a driver, press the Pirelli tire button below to get the predicted outcome of the driver at that race. If you would like to do another prediction press the predict result button below. 
+- Once on the website, follow these steps:
+
+   1. Navigate to the grand prix dropdown.
+   2. Select a grand prix from the options available.
+   3. Next, navigate to the driver dropdown.
+   4. Select a driver from the list provided.
+   5. After choosing both a grand prix and a driver, proceed with the following steps:
+
+- Locate and press the Pirelli tire button located below.
+   - By doing so, you'll receive the predicted outcome of the selected driver for that particular race.
+- If you wish to make another prediction, simply follow these steps:
+
+1. Press the predict result button situated below.
 
 # Limitations
-Right now, the model I have employed has an f1 score of about 0.75 and an accuracy of about 0.78. The general areas of improvement are edge cases. For example, from the confusion matrix, we can see it is sometimes difficult for the model to decide whether a case is actually just Points but it predicts Podium and also if a case is actually No Points but the model predicts Points. I will provide the visuals for this in the repo. Because this sport is very nuanced and there are many rule changes pertaining to the car each year, I think I have a data limitation problem from the dataset I am sourcing from. I think the model would have more context if it were given information like overtakes, car performance, and other more telling data.
+- The current model I've implemented demonstrates an f1 score of approximately 0.75 and an accuracy of around 0.78.
+- The key areas for enhancement mainly involve addressing edge cases.
+- For instance, the confusion matrix analysis reveals situations where the model struggles to distinguish between certain scenarios:
+- It occasionally faces challenges in distinguishing between cases that could be accurately categorized as Points, but the model predicts them as Podium.
+- Additionally, it sometimes encounters difficulty in discerning No Points scenarios, leading to Points predictions.
+- Visual representations illustrating these instances will be provided within the repository.
+- Given the intricate nature of Formula 1, characterized by nuanced rules and annual car performance modifications, it's apparent that there's a data limitation inherent to the dataset I'm utilizing.
+- Addressing this limitation, the model could potentially benefit from incorporating more comprehensive information such as:
+1. Overtaking data
+2. Car performance metrics
+3. Other pertinent factors that offer deeper insights.
+
+By integrating these additional facets, the model could gain a broader context, potentially leading to improved predictions and a more accurate representation of the intricate dynamics of Formula 1 racing.
 
 # Future Improvements
-I plan to come back to this project and try to improve the predictive power of the model. I will try to use deep learning and neural networks, currently, I have only experimented and tuned the best models provided by sklearn ensemble and imbalance learn's models. I will also see if there is a way to scrape data from other sources and map them correctly to the training data. Once the creator of the dataset updates the 2023 data, I will retrain up until the 2022 data, and then use the 2023 data to predict on the website. 
+- In the future, I have plans to revisit this project with the goal of enhancing the model's predictive capabilities.
+- To achieve this, I intend to explore the implementation of deep learning techniques and neural networks.
+- It's important to note that, up to this point, I've primarily focused on experimenting with and fine-tuning the best models offered by sklearn's ensemble and imbalance learn's models.
+- As part of the improvement process, I'll investigate the possibility of sourcing data from alternative and diverse sources.
+- A key objective will be to appropriately integrate this new data into the existing training dataset.
+- Furthermore, I'll keep a close eye on updates from the dataset's creator, particularly any updates related to the 2023 data.
+- Upon the release of the 2023 data, my plan is to undertake the following steps:
+- Retrain the model using data up to 2022.
+- Utilize the newly available 2023 data to enhance the predictive accuracy of the model.
+
+Ultimately, these efforts are aimed at refining the model's performance and ensuring its alignment with the most up-to-date information, thus contributing to the accuracy and relevance of the predictions provided on the website.
 
 # Getting Started
-Since the project is cross-platform there is no easy way to get started. However, I can tell you where and how to start up the necessary project files. In any code editor, you can take the Folder F1 Place Predictor, which is made up of two Python files. DataHandler.py and main.py. You can adjust DataHandler to train from the years you specify in the constructor. Then you can run main.py to export the data to a Database. Make sure to install all the necessary imports in the code and to install Pymongo on your machine if you plan on using that as your database.
+As this project spans multiple platforms, the initial setup process may seem complex. However, I'm here to guide you through the steps needed to kick-start the project files.
 
-Then take the training data from the database and load it into any environment where you have enough computing power to perform machine learning tasks. I decided to use AWS for my machine learning training. This requires you to set up an AWS account and store the training data file in your Amazon S3 bucket. Then spin up a notebook instance in Amazon Sagemaker and use the Jupyter Notebook I provided to train the model and get the scoring metrics. Run this program and it should save a model to your S3 bucket.
+Begin by using any code editor to work with the "F1 Place Predictor" folder, which consists of two Python files: "DataHandler.py" and "main.py".
 
-Now transfer the model joblib files to the models folder in the ModelTransform Project File under the Data Handling folder in this repo. This will save your model in chunks to the MongoDB Database.
+In the "DataHandler.py" file, you have the flexibility to customize data training based on the years you specify in the constructor.
 
-All the work under the hood is now done. 
+Running the "main.py" file will enable data export to a database. Ensure that you've installed all the required dependencies and libraries in your code, including "Pymongo" if you intend to use it as your database solution.
 
-I have the Frontend and the Backend Files in this repo where you can see how it works with the Web Application. Basically, the Backend framework receives and fulfills API requests made by the user in the front end. There is a Python script called app.py that handles these requests and uses the data and models from the MongoDB database to fulfill these requests. 
+With the training data now available in the database, proceed to load it into an environment with sufficient computational capacity to handle machine learning tasks.
+
+For my machine learning training, I opted for AWS, which entails setting up an AWS account and storing the training data file within your Amazon S3 bucket.
+
+Utilize Amazon Sagemaker to launch a notebook instance, where you can employ the provided Jupyter Notebook for model training and obtaining scoring metrics.
+
+Running this notebook will save a trained model to your designated S3 bucket.
+
+The next step involves transferring the generated "joblib" model files to the "models" folder within the "ModelTransform Project File" found under the "Data Handling" section of this repository.
+
+By completing this step, your model will be systematically stored in sections within the MongoDB Database.
+
+With the groundwork laid, the intricate backend processing is now complete.
+
+Within this repository, you'll find both frontend and backend files that illuminate how the Web Application operates.
+
+The backend framework is responsible for processing API requests generated by users within the frontend interface.
+
+The "app.py" Python script is pivotal in managing these requests, tapping into the data and models housed in the MongoDB database to seamlessly fulfill user queries.
+
+By following these steps, you'll be well on your way to understanding and implementing the end-to-end functionality of the F1 Place Predictor web application.
 
 # Conclusion
 Please reach out to me if you have any questions or confusion. This is my first big personal project so please let me know Github best practices and ways I can clarify my code and my deployment. I never thought the day would come when I would write my own README file, so I am very excited to share my project with you. 
