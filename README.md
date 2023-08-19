@@ -1,27 +1,64 @@
 # F1 Racing Machine Learning Place Predictor
 
- An End to End Machine Learning Project
+ An End-to-End Machine Learning Project Formula 1 Racing
 
 # Overview
-- Briefly introduce the project and its purpose.
-Explain the importance of predicting sports outcomes and how it adds value.
-Highlight the challenging nature of the problem due to the unpredictable nature of sports events.
+- This project is an end-to-end machine learning web application that predicts the final places of drivers at future races based on historical racing and telemetry data.
+- This project adds value to the field of Formula 1 data science by showing the metrics that best predict good outcomes for drivers and constructors.
+- This project aims to predict the finish domains of the drivers based on race data. It will predict either Podium (1st -3rd), Points (4th - 10th), or No Points (11th - 20th). 
+- Since Formula 1 Racing is a sport decided in mere seconds, it is very important to follow the best Machine Learning practices to get the best results.
 
 # Skills Demonstrated
-Outline the skills you've utilized or gained throughout the project.
-Mention any specific technologies, programming languages, or tools you've used.
+The skills I learned through this project include advanced knowledge of Python libraries used for Data Science, Machine Learning, Data Storage, and Databases. I also learned Amazon Web Services like s3, Sagemaker, EC2, and many more AWS services in order to train the model on large amounts of data. To create the F1 ML Web App, I had to learn HTML, CSS, Javascript, and Python backend programming using Flask. 
+
 # Before vs. After
-Describe your expertise and knowledge before starting the project.
-Explain how completing the project has improved your skills and understanding.
+Keep in mind, I had no practical Machine Learning knowledge before this project. 
+
+Through the struggles of this project I have become very comfortable with Machine Learning practices like data preprocessing, One-Hot-Encoding, Imputing Missing Values, Training and Testing splits, preventing Data Leakage, Machine Learning Algorithms, SMOTE, Hyperparameter Tuning, Class Imbalance, and scoring metrics to understand how well a machine learning model will perform. 
+
 # How It Works
-Provide a high-level schematic of the architecture and components of your project.
-Describe how the machine learning algorithms work to predict sports outcomes.
-Highlight any data preprocessing, feature engineering, or model training steps.
+   +-------------------+
+   |    Frontend       |
+   | (HTML/CSS/JS)     |
+   +-------------------+
+          |
+   +-------------------+
+   | Flask Backend     |
+   +-------------------+
+          |
+   +-------------------+
+   |   MongoDB         |
+   +-------------------+
+          |
+        AWS
+          |
+   +-------------------+
+   |   AWS Machine     |
+   |   Learning        |
+   +-------------------+
+          |
+   +-------------------+
+   |   MongoDB         |
+   |   (Models)        |
+   +-------------------+
+          |
+   +-------------------+
+   |   DataHandler     |
+   |    MongoDB        |
+   +-------------------+
+          |
+   +-------------------+
+   | Kaggle Dataset    |
+   +-------------------+
+
 # Website Preview
-Include a link to the deployed website where users can try out the Place Predictor.
-Provide clear instructions on how users can navigate the website and interact with it.
+Website Link: Almost Done
+
+Once you get on the website, navigate to the grand prix dropdown. Select a grand prix, then navigate to the driver dropdown and select a driver.
+Once you have chosen both a grand prix and a driver, press the Pirelli tire button below to get the predicted outcome of the driver at that race. If you would like to do another prediction press the predict result button below. 
+
 # Limitations
-Discuss the limitations of your current project iteration.
+Right now, the model I have employed has an f1 score of 
 Address potential areas where the predictions might fall short or be less accurate.
 Explain any factors that may affect the accuracy of predictions.
 # Future Improvements
