@@ -8,6 +8,9 @@
 - This project aims to predict the finish domains of the drivers based on race data. It will predict either Podium (1st -3rd), Points (4th - 10th), or No Points (11th - 20th). 
 - Since Formula 1 Racing is a sport decided in mere seconds, it is very important to follow the best Machine Learning practices to get the best results.
 
+# Resources 
+Kaggle Dataset: https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020
+
 # Skills Demonstrated
 The skills I learned through this project include advanced knowledge of Python libraries used for Data Science, Machine Learning, Data Storage, and Databases. I also learned Amazon Web Services like s3, Sagemaker, EC2, and many more AWS services in order to train the model on large amounts of data. To create the F1 ML Web App, I had to learn HTML, CSS, Javascript, and Python backend programming using Flask. 
 
@@ -66,7 +69,7 @@ Once you have chosen both a grand prix and a driver, press the Pirelli tire butt
 Right now, the model I have employed has an f1 score of about 0.75 and an accuracy of about 0.78. The general areas of improvement are edge cases. For example, from the confusion matrix, we can see it is sometimes difficult for the model to decide whether a case is actually just Points but it predicts Podium and also if a case is actually No Points but the model predicts Points. I will provide the visuals for this in the repo. Because this sport is very nuanced and there are many rule changes pertaining to the car each year, I think I have a data limitation problem from the dataset I am sourcing from. I think the model would have more context if it were given information like overtakes, car performance, and other more telling data.
 
 # Future Improvements
-I plan to come back to this project and try to improve the predictive power of the model. I will try to use deep learning and neural networks, currently, I have only experimented and tuned the best models provided by sklearn ensemble and imbalance learn's models. I will also see if there is a way to scrape data from other sources and map them correctly to the training data. 
+I plan to come back to this project and try to improve the predictive power of the model. I will try to use deep learning and neural networks, currently, I have only experimented and tuned the best models provided by sklearn ensemble and imbalance learn's models. I will also see if there is a way to scrape data from other sources and map them correctly to the training data. Once the creator of the dataset updates the 2023 data, I will retrain up until the 2022 data, and then use the 2023 data to predict on the website. 
 
 # Getting Started
 Since the project is cross-platform there is no easy way to get started. However, I can tell you where and how to start up the necessary project files. In any code editor, you can take the Folder F1 Place Predictor, which is made up of two Python files. DataHandler.py and main.py. You can adjust DataHandler to train from the years you specify in the constructor. Then you can run main.py to export the data to a Database. Make sure to install all the necessary imports in the code and to install Pymongo on your machine if you plan on using that as your database.
