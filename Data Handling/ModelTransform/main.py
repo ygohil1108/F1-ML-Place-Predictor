@@ -22,7 +22,7 @@ def main():
         rf_SVM_data = rf_SVM_file.read()
 
     # Connect to MongoDB
-    client = pymongo.MongoClient("mongodb://localhost:27017")
+    client = pymongo.MongoClient("{Your-LocalHost_Sever}")
     db = client["F1_ML_Data"]
     fs = GridFS(db, collection='ML-Models')
 
