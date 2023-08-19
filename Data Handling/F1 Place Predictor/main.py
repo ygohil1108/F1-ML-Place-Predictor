@@ -41,7 +41,7 @@ current_cat_dh.merge_data()
 current_cat_dh.manual_cleanup_categorical()
 
 # Send to MongoDB Database
-client = pymongo.MongoClient("mongodb://localhost:27017")
+client = pymongo.MongoClient("{Your-LocalHost-Server}")
 db = client["F1_ML_Data"]
 
 train_test_data = train_test_dh.get_dataframe().to_dict(orient="records")
