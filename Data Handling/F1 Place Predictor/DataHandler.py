@@ -150,20 +150,6 @@ class DataHandler:
             milli = (int(minutes) * 60000) + (int(seconds) * 1000) + int(milliseconds)
             return milli
 
-    # def export_data(self):
-    #     scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
-    #     credentials = SAC.from_json_keyfile_name('credentials.json', scope)
-    #     client = gspread.authorize(credentials)
-    #     sheet = client.open('F1 Data V2').sheet1
-    #     self.df = self.df.fillna('')
-    #     # Get the column names as a list
-    #     column_names = self.df.columns.tolist()
-    #
-    #     data = self.df.values.tolist()
-    #     sheet.clear()
-    #     sheet.insert_row(column_names, index=1)
-    #     sheet.insert_rows(data, row=2)
-
     def map_data(self):
         conditions = [
             self.df['driver_pos'].between(1, 3),
