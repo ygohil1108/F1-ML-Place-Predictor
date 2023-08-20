@@ -34,7 +34,7 @@ Kaggle Dataset: https://www.kaggle.com/datasets/rohanrao/formula-1-world-champio
    - Understanding and utilizing scoring metrics to assess machine learning model performance
 
 # How It Works
-- Please reference schematic.
+- Please view the video demonstration that shows how the app works. I am currently still deploying the web application online. 
 
 # Website Preview
 Website Link: Almost Done
